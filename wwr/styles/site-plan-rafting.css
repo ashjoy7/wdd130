@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+:root {
+  --primary-color: #0B3954;
+  --secondary-color: #087E8B;
+  --accent-color: #C81D25;
+  --additional-accent-color: #FF5A5F;
+  --heading-font: 'Sigmar', sans-serif;
+  --paragraph-font: Arial, sans-serif;
+  --nav-background-color: #BF6D3A;
+  --nav-link-color: #FFFFFF;
+  --nav-hover-link-color: #BF6D3A;
+  --nav-hover-background-color: #FFFFFF;
+}
+
+body {
+  font-family: var(--paragraph-font);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: #0B3954;
+}
+
+header {
+  padding: 20px;
+  background-color: #087E8B;
+}
+
+main {
+  padding: 20px;
+}
+
+p {
+  padding: 10px 0;
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  font-size: 1.2rem;
+  display: flex;
+}
+
+nav a {
+  display: block;
+  color: var(--nav-link-color);
+  text-decoration: none;
+  padding: 1rem;
+}
+
+nav a:link, nav a:visited {
+  color: var(--nav-link-color);
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}

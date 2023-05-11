@@ -7,38 +7,55 @@
     <meta name="author" content="Ashley Egan">
     <title>Ashley Egan | WDD 130</title>
     <style>
-        * {
+        *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
+        .grid header,
+        .grid footer {
+            max-width: 840px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
         main {
             max-width: 840px;
         }
+
         aside {
-            margin: 20px;
+            margin: 50px;
             border: 1px solid black;
             padding: 10px;
             background-color: #f2f2f2;
             color: black;
         }
+
         aside img {
             width: 200px;
             height: auto;
         }
+
         main img[src="images/profile.jpg"] {
             float: right;
             margin-left: 10px;
             width: 200px;
         }
+
         main p {
             padding: 0;
         }
+
         footer {
             margin-top: 50px;
             border-top: 1px solid black;
             text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
         }
+
         .box {
             display: inline-block;
             margin: 10px;
@@ -46,26 +63,33 @@
             border: 1px solid black;
             background-color: #f2f2f2;
         }
+
         .box ul {
             list-style-type: none;
             padding: 0;
         }
+
         .box ul li {
             margin: 10px 0;
         }
-        /* ================================
-   Class Selectors
-   ================================= */
+
+        h1 {
+            border-bottom: 1px solid black;
+        }
+
+            /* ================================
+            Class Selectors
+            ================================= */
+
         .box {
             margin: 1rem;
             padding: 1rem;
             border: 1px solid black;
             background-color: #f2f2f2;
             color: black;
-        }
-        .box {
             position: relative;
         }
+
         .box h2 {
             position: absolute;
             top: 0;
@@ -76,43 +100,62 @@
             color: white;
         }
 
+        header nav {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #333;
+            color: white;
+        }
 
-    </style>
+        nav a {
+            display: block;
+            padding: 0.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+      </style>
+      
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="wwr/about.html">White Water Rafting Website</a>
-            <a href="wwr/site-plan-rafting.html">White Water Rafting Siteplan</a>
-            <a href="https://www.linkedin.com/">LinkedIn</a>
-            <a href="https://www.facebook.com/">Facebook</a>
-        </nav>
-    </header>
+    <div class="grid">
+        <header>
+            <nav>
+                <a href="#">Home</a>
+                <a href="wwr/about.html">White Water Rafting Website</a>
+                <a href="wwr/site-plan-rafting.html">White Water Rafting Siteplan</a>
+                <a href="https://www.linkedin.com/">LinkedIn</a>
+                <a href="https://www.facebook.com/">Facebook</a>
+            </nav>
+        </header>
 
-<main>
-	<h1>Ashley Egan | WDD 130</h1>
-	<img src="images/profile.jpg" alt="Hello, my name is Ashley Egan">
-	<p>Hello! My name is Ashley Egan and I am from Mesa, Arizona. I enjoy playing cooking and playing video games.</p>
+        <main>
+            <h1>Ashley Egan | WDD 130</h1>
+            <img src="images/profile.jpg" alt="Hello, my name is Ashley Egan">
+            <p>Hello! My name is Ashley Egan and I am from Mesa, Arizona. I enjoy cooking and playing video games.</p>
 
-    <div class="box">
-        <h2>Favorite Temples</h2>
-        <ul class="box">
-          <li><a href="https://www.churchofjesuschrist.org/temples/details/the-gila-valley-arizona-temple?lang=eng" target="_blank">The Gila Valley Arizona Temple</a></li>
-          <li><a href="https://www.churchofjesuschrist.org/temples/details/logan-utah-temple?lang=eng" target="_blank">The Logan Utah Temple</a></li>
-          <li><a href="https://www.churchofjesuschrist.org/temples/details/mesa-arizona-temple?lang=eng" target="_blank">The Mesa Arizona Temple</a></li>
-        </ul>
-      </div>
-      
-</main>
-<aside class="box">
-	<h2>Arizona</h2>
-	<img src="images/arizona.jpg" alt="Arizona landscape">
-	<p>Arizona is a state in the Southwestern United States. It is bordered by California, Utah, and New Mexico.</p>
-</aside>
-<footer>
-	<p>&copy; 2023 🏜️ Ashley Egan 🏜️ Mesa AZ | Last modified: May 3, 2023</p>
-</footer>
+            <div class="box">
+                <h2>Favorite Temples</h2>
+                <ul class="box">
+                <li><a href="https://www.churchofjesuschrist.org/temples/details/the-gila-valley-arizona-temple?lang=eng" target="_blank">The Gila Valley Arizona Temple</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/temples/details/logan-utah-temple?lang=eng" target="_blank">The Logan Utah Temple</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/temples/details/mesa-arizona-temple?lang=eng" target="_blank">The Mesa Arizona Temple</a></li>
+                </ul>
+            </div>
+            
+        </main>
+        <aside class="box">
+            <h2>Arizona</h2>
+            <img src="images/arizona.jpg" alt="Arizona landscape">
+            <p>Arizona is a state in the Southwestern United States. It is bordered by California, Utah, and New Mexico.</p>
+        </aside>
+        <footer>
+            <p>&copy; 2023 🏜️ Ashley Egan 🏜️ Mesa AZ | Last modified: May 3, 2023</p>
+        </footer>
+    </div>
 </body>
 <!-- Last modified: May 3, 2023 -->
 </html>

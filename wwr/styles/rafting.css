@@ -25,10 +25,33 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary-color);
 }
 
+h2 {
+  text-align: center;
+}
+
+
 header {
   padding: 20px;
   background-color: var(--secondary-color);
 }
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--secondary-color);
+}
+
+header img {
+  justify-self: start;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
 
 main {
   padding: 5px;
@@ -100,12 +123,15 @@ nav a:hover {
 
 .hero .small-image {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 20%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 28%;
   max-width: 200px;
-  margin: 30px;
+  margin: 0;
+  z-index: -1;
 }
+
 
 .sociallinks a {
   text-decoration: none;
@@ -117,4 +143,15 @@ nav a:hover {
 .sociallinks a:hover {
   opacity: 0.8;
   border-bottom: none;
+}
+
+.rafting-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rafting-images img {
+  flex: 1;
+  max-width: 100%;
+  height: auto;
 }

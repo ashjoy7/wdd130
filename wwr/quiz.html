@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Online Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css"> <!-- This is where you will link your CSS file -->
+</head>
+<body>
+    <h1>Online Quiz - HTML and CSS</h1>
+
+    <form action="submit_quiz.php" method="post">
+        <div>
+            <label for="q1">What does HTML stand for?</label>
+            <input type="text" name="q1" id="q1" required>
+        </div>
+
+        <div>
+            <label for="q2">What is the correct way to include an external CSS file?</label>
+            <textarea name="q2" id="q2" rows="4" cols="50" required></textarea>
+        </div>
+
+        <div>
+            <label for="q3">Which CSS property is used to change the text color of an element?</label>
+            <select name="q3" id="q3" required>
+                <option value="">Select an option</option>
+                <option value="option1">color</option>
+                <option value="option2">font-color</option>
+                <option value="option3">text-color</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="q4">How do you select an element with the id "myElement" using CSS?</label>
+            <input type="text" name="q4" id="q4" required>
+        </div>
+
+        <button type="submit">Submit Quiz</button>
+    </form>
+</body>
+</html>

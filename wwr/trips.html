@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trips - Wild Waters Rafting</title>
+	<link rel="stylesheet" href="styles/rafting.css"> <!-- This is where you will link your CSS file -->
+	<style>
+		.rafting-images {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.rafting-images figure {
+			width: 30%;
+			text-align: center;
+			transition: transform 0.3s, width 0.3s;
+			position: relative; /* Added */
+			cursor: pointer; /* Added */
+		}
+
+		.rafting-images figure:hover {
+			transform: scale(1.05);
+			width: 32%;
+		}
+
+		.rafting-images figcaption {
+			margin-top: 5px;
+		}
+
+		.rafting-images p {
+			display: none;
+			position: absolute; /* Added */
+			top: 0; /* Added */
+			left: 0; /* Added */
+			width: 100%; /* Added */
+			height: 100%; /* Added */
+			background-color: rgba(255, 255, 255, 0.9); /* Added */
+			padding: 10px; /* Added */
+			pointer-events: none; /* Added */
+			transition: opacity 0.3s; /* Added */
+			opacity: 0; /* Added */
+		}
+
+		.rafting-images figure:hover p {
+			display: block;
+			opacity: 1;
+		}
+
+		.contact-section {
+			text-align: center;
+			margin: 40px 0;
+		}
+
+		.contact-section a {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #ff9800;
+			color: #fff;
+			font-weight: bold;
+			text-decoration: none;
+			border-radius: 5px;
+		}
+		
+		.trip-table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 20px;
+		}
+
+		.trip-table th,
+		.trip-table td {
+			padding: 10px;
+			text-align: center;
+		}
+
+		.trip-table th {
+			background-color: #ff9800;
+			color: #fff;
+		}
+
+		.trip-table td {
+			border: 1px solid #ddd;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="images/logo.jpeg" alt="Wild Water Rafting logo">
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="about.html">About Us</a>
+			<a href="trips.html">Trips</a>
+			<a href="contact.html">Contact</a>
+		</nav>
+	</header>
+	<main>
+		<section class="hero">
+			<div class="hero-container">
+			  <img src="images/hero.jpg" alt="Wild Waters Rafting hero image">
+			  <div class="mission">
+				<h1><span>Wild Water</span> <span>Rafting</span></h1>
+				<article>
+				  <img class="small-image" src="images/happy.jpg" alt="Happy client or employee image">
+				  <p>We believe in providing the ultimate white water rafting experience for thrill-seekers and adventure enthusiasts alike. Our mission is to make sure everyone who comes on our trips has a safe, fun, and unforgettable time on the river.</p>
+				</article>
+			  </div>
+			</div>
+		</section>
+		<section class="contact-section">
+			<h2>Click here to contact us to arrange your next adventure!</h2>
+			<a href="contact.html">Contact Us</a>
+		</section>
+		<section>
+			<h2>Trips</h2>
+			<div class="rafting-images">
+				<figure>
+					<img src="images/winterfell.jpg" alt="Winterfell">
+					<figcaption>Winterfell</figcaption>
+					<p>Winter is coming! Come take a rafting trip to one of the most formidable castles in all of Westeros!</p>
+				</figure>
+				<figure>
+					<img src="images/hogwarts.jpg" alt="Hogwarts">
+					<figcaption>Hogwarts</figcaption>
+					<p>Feeling like a magical adventure to the most prestigious school of witchcraft and wizardry? You'll love our rafting adventure at the Black Lake near Hogwarts!</p>
+				</figure>
+				<figure>
+					<img src="images/bikini_bottom.jpg" alt="Bikini Bottom">
+					<figcaption>Bikini Bottom</figcaption>
+					<p>Looking for adventure at the bottom of the ocean? We got it!</p>
+				</figure>
+			</div>
+			<table class="trip-table">
+				<thead>
+					<tr>
+						<th>Trip</th>
+						<th>Duration</th>
+						<th>Difficulty</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Winterfell</td>
+						<td>2 days</td>
+						<td>Intermediate</td>
+						<td>$500</td>
+					</tr>
+					<tr>
+						<td>Hogwarts</td>
+						<td>1 day</td>
+						<td>Beginner</td>
+						<td>$300</td>
+					</tr>
+					<tr>
+						<td>Bikini Bottom</td>
+						<td>3 days</td>
+						<td>Advanced</td>
+						<td>$700</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</main>
+	<footer>
+		<nav class="sociallinks">
+			<a href="https://www.facebook.com">
+				<img src="images/facebook_logo.png" alt="Facebook logo" width="30" height="30">
+			</a>
+			<a href="https://www.twitter.com">
+				<img src="images/twitter_logo.png" alt="Twitter logo" width="30" height="30">
+			</a>
+			<a href="https://www.instagram.com">
+				<img src="images/instagram_logo.png" alt="Instagram logo" width="30" height="30">
+			</a>
+		</nav>
+		<p>&copy; 2023 Wild Waters Rafting. All rights reserved.</p>
+	</footer>
+</body>
+</html>

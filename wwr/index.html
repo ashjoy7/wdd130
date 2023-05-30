@@ -17,45 +17,33 @@
 	<main>
 		<section class="hero">
 			<div class="hero-container">
-			  <img src="images/hero.jpg" alt="Wild Waters Rafting hero image">
-			  <div class="mission">
-				<h1><span>Wild Water</span> <span>Rafting</span></h1>
-				<article>
-				  <img class="small-image" src="images/happy.jpg" alt="Happy client or employee image">
-				  <p>We believe in providing the ultimate white water rafting experience for thrill-seekers and adventure enthusiasts alike. Our mission is to make sure everyone who comes on our trips has a safe, fun, and unforgettable time on the river.</p>
-				</article>
-			  </div>
-			</div>
-		  </section>
-		<section>
-			<h2>History</h2>
-			<p>Wild Waters Rafting was founded in 1995 by a group of passionate rafting guides who wanted to share their love of the river with others. Since then, we have grown to become one of the premier rafting companies in the region, with a team of experienced guides and state-of-the-art equipment.</p>
-		</section>
-		<section>
-			<h2>Adventure Awaits You!</h2>
-				<div class="rafting-images">
-					<figure>
-					  <img src="images/rafting1.jpg" alt="Los Dientes del Diablo">
-					  <figcaption>Los Dientes del Diablo</figcaption>
-					</figure>
-					<figure>
-					  <img src="images/rafting2.jpg" alt="Big Mallard">
-					  <figcaption>Big Mallard</figcaption>
-					</figure>
-					<figure>
-					  <img src="images/rafting3.jpg" alt="Half Day Adventure">
-					  <figcaption>Half Day Adventure</figcaption>
-					</figure>
-					<figure>
-					  <img src="images/rafting4.jpg" alt="Devil's Teeth">
-					  <figcaption>Devil's Teeth</figcaption>
-					</figure>
-					<figure>
-					  <img src="images/rafting5.jpg" alt="Red River Gorge">
-					  <figcaption>Red River Gorge</figcaption>
-					</figure>
+				<img src="images/hero.jpg" alt="Wild Waters Rafting hero image">
+				<div class="mission">
+					<h1><span>Wild Water</span> <span>Rafting</span></h1>
+					<article>
+						<img class="small-image" src="images/happy.jpg" alt="Happy client or employee image">
+						<p>We believe in providing the ultimate white water rafting experience for thrill-seekers and adventure enthusiasts alike. Our mission is to make sure everyone who comes on our trips has a safe, fun, and unforgettable time on the river.</p>
+					</article>
 				</div>
+			</div>
 		</section>
+		<div class="slideshow-container">
+			<div class="slide active">
+				<img src="images/rafting1.jpg" alt="Rafting Image 1">
+			</div>
+			<div class="slide">
+				<img src="images/rafting2.jpg" alt="Rafting Image 2">
+			</div>
+			<div class="slide">
+				<img src="images/rafting3.jpg" alt="Rafting Image 3">
+			</div>
+			<div class="slide">
+				<img src="images/rafting4.jpg" alt="Rafting Image 4">
+			</div>
+			<div class="slide">
+				<img src="images/rafting5.jpg" alt="Rafting Image 5">
+			</div>
+		</div>
 	</main>
 	<footer>
 		<nav class="sociallinks">
@@ -71,5 +59,31 @@
 		</nav>
 		<p>&copy; 2023 Wild Waters Rafting. All rights reserved.</p>
 	</footer>
+	<script>
+		const slides = document.querySelectorAll(".slide");
+		let currentSlide = 0;
+
+		function showSlide(slideIndex) {
+			slides.forEach((slide, index) => {
+				if (index === slideIndex) {
+					slide.classList.add("active");
+				} else if (index === currentSlide) {
+					slide.classList.add("previous");
+					slide.classList.remove("active");
+				} else {
+					slide.classList.remove("previous");
+					slide.classList.remove("active");
+				}
+			});
+			currentSlide = slideIndex;
+		}
+
+		function nextSlide() {
+			const nextIndex = (currentSlide + 1) % slides.length;
+			showSlide(nextIndex);
+		}
+
+		setInterval(nextSlide, 3000);
+	</script>
 </body>
 </html>
